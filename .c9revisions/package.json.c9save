@@ -1,0 +1,15 @@
+{"ts":1357753463154,"silentsave":true,"restoring":false,"patch":[[]],"length":0}
+{"contributors":[],"silentsave":true,"ts":1357753467575,"patch":[[{"diffs":[[1,"{\n  \"name\": \"hello-world\",\n  \"description\": \"hello world test app\",\n  \"version\": \"0.0.1\",\n  \"private\": true,\n  \"dependencies\": {\n    \"express\": \"3.x\"\n  }\n}"]],"start1":0,"start2":0,"length1":0,"length2":155}]],"length":155,"saved":false}
+{"ts":1357753470903,"patch":[[{"diffs":[[0,"\": \""],[-1,"hello-world"],[1,"mobile-interactive"],[0,"\",\n "]],"start1":9,"start2":9,"length1":19,"length2":26}]],"length":162,"saved":false}
+{"ts":1357753478290,"patch":[[{"diffs":[[0,"\": \""],[-1,"hello world test app"],[1,"Control a webpage with your phone!"],[0,"\",\n "]],"start1":48,"start2":48,"length1":28,"length2":42}]],"length":176,"saved":false}
+{"ts":1357753482016,"patch":[[{"diffs":[[0,"1\",\n"],[-1,"  \"private\": true,\n"],[0,"  \"d"]],"start1":107,"start2":107,"length1":27,"length2":8}]],"length":157,"saved":false}
+{"ts":1357753498292,"patch":[[{"diffs":[[0,"\": \"3.x\""],[1,",\n    "],[0,"\n  }\n}"]],"start1":143,"start2":143,"length1":14,"length2":20}]],"length":163,"saved":false}
+{"ts":1357753501007,"patch":[[{"diffs":[[0,"x\",\n    "],[1,"\"jade\": "],[0,"\n  }\n}"]],"start1":149,"start2":149,"length1":14,"length2":22}]],"length":171,"saved":false}
+{"ts":1357753501956,"patch":[[{"diffs":[[0,"\"jade\": "],[1,"\"\""],[0,"\n  }\n}"]],"start1":157,"start2":157,"length1":14,"length2":16}]],"length":173,"saved":false}
+{"ts":1357753503275,"patch":[[{"diffs":[[0,"ade\": \"\""],[1,",\n    "],[0,"\n  }\n}"]],"start1":159,"start2":159,"length1":14,"length2":20}]],"length":179,"saved":false}
+{"ts":1357753505275,"patch":[[{"diffs":[[0,"\"\",\n    "],[1,"\"socket.io\":"],[0,"\n  }\n}"]],"start1":165,"start2":165,"length1":14,"length2":26}]],"length":191,"saved":false}
+{"ts":1357753506826,"patch":[[{"diffs":[[0,"ket.io\":"],[1," \"\""],[0,"\n  }\n}"]],"start1":177,"start2":177,"length1":14,"length2":17}]],"length":194,"saved":false}
+{"ts":1357753518201,"patch":[[{"diffs":[[0,"jade\": \""],[1,"0.28.0"],[0,"\",\n    \""]],"start1":158,"start2":158,"length1":16,"length2":22}]],"length":200,"saved":false}
+{"ts":1357753530410,"patch":[[{"diffs":[[0,"t.io\": \""],[1,"0.9"],[0,"\"\n  }\n}"]],"start1":185,"start2":185,"length1":15,"length2":18}]],"length":203,"saved":false}
+{"ts":1357753531996,"patch":[[{"diffs":[[0,"o\": \"0.9"],[1,".x"],[0,"\"\n  }\n}"]],"start1":188,"start2":188,"length1":15,"length2":17}]],"length":205,"saved":false}
+{"ts":1357753533402,"patch":[[{"diffs":[[0,": \"0.28."],[-1,"0"],[1,"x"],[0,"\",\n    \""]],"start1":163,"start2":163,"length1":17,"length2":17}]],"length":205,"saved":false}

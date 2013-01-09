@@ -1,0 +1,10 @@
+{
+  "name": "mobile-interactive",
+  "description": "Control a webpage with your phone!",
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "3.x",
+    "jade": "0.28.x",
+    "socket.io": "0.9.x"
+  }
+}
