@@ -15,22 +15,31 @@ app.get('/mobile/:id', function(req, res){
     res.render('mobile.jade', {id: req.params.id});
 });
 
-server.listen(process.env.PORT);
+server.listen(process.env.PORT || 8080);
 
 var regUsers = {};
 
 io.sockets.on('connection', function(socket) {
+    var deskSocket;
+    var mobileSocket
+
     socket.on('desktop-register', function(data) {
-        regUsers[data.id] = socket;
+        regUsers[data.id] = deskSocket = socket;
     });
     
     socket.on('mobile-register', function(data) {
-        console.log("got mobile register", Date.now());
+        mobileSocket = socket;
+
         if(typeof(regUsers[data.id]) !== "undefined") {
-            var deskSocket = regUsers[data.id];
+            deskSocket = regUsers[data.id];
             
             deskSocket.emit('mobile-on');
-            console.log("sent mobile register to desktop", Date.now());
+        }
+    });
+
+    socket.on('mobile-orientation', function(orientation) {
+        if(typeof(deskSocket) !== "undefined" && deskSocket !== null) {
+            deskSocket.emit('orientation', orientation);
         }
     });
 });

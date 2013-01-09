@@ -1,0 +1,37 @@
+#game {
+	height: 100%;
+	width: 100%;
+	overflow: visible;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: #161847;
+}
+
+#game #field {
+	width: 75%;
+	height: 100px;
+	margin: auto;
+	margin-top: 100px;
+	position: relative;
+	-webkit-transition: -webkit-transform: .3s;
+}
+
+#game #field .ball {
+	height: 30px;
+	width: 30px;
+	border-radius: 30px;
+	background-color: #916F9E;
+	position: absolute;
+	bottom: 15px;
+	left: 75%;
+}
+
+#game #field #bar {
+	height: 15px;
+	width: 100%;
+	background-color: #88888F;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}

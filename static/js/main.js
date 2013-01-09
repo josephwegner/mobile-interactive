@@ -18,11 +18,14 @@
         var socket = io.connect(baseUrl);
 
         socket.emit('desktop-register', {id: uniqueId});
-        console.log("registration sent");
 
         socket.on('mobile-on', function(data) {
-            alert("Mobile on! " + Date.now()); 
+            $("#content").slideDown(function() { $(window).trigger('content-ready'); });
         });
+
+        socket.on('orientation', function(orientation) {
+            $(window).trigger('orientation-change', orientation);
+        })
 
     });
 })();
