@@ -10,13 +10,14 @@
 
         socket.emit('mobile-register', {id: uniqueId});
 
-        MobileReader.bindOrientation({
-        	callback: function(orientation) {
-        		console.log("send");
-        		socket.emit('mobile-orientation', orientation);
-        	},
-        	interval: 500
+        socket.on('start', function(data) {
+            MobileReader.bindOrientation({
+            	callback: function(orientation) {
+            		socket.emit('mobile-orientation', orientation);
+                    $(".count").text(parseInt($(".count").text()) + 1);
+            	},
+            	interval: 500
+            });
         });
-
     });
 })();

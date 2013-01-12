@@ -1,0 +1,104 @@
+{"ts":1357768742064,"silentsave":true,"restoring":false,"patch":[[{"diffs":[[1,"(function() {\n\t$(document).ready(function() {\n\n\t\tvar balls = [];\n\t\tvar ballMass = 10;\n\t\tvar curRotation = 0;\n\t\tvar len = $(\"#bar\").width();\n\t\tvar accelModifier = .001;\n\n\t\tvar init = function(e) {\n\t\t\t$(window).bind('orientation-change', orientationHandler);\n\n\t\t\t$(\".ball\").each(function() {\n\t\t\t\tballs.push({\n\t\t\t\t\tele: this,\n\t\t\t\t\tvelocity: 0\n\t\t\t\t});\n\t\t\t});\n\n\t\t\tsetInterval(runFrame, 10);\n\t\t};\n\n\t\tvar orientationHandler = function(e, orientation) {\n\t\t\t$(\"#field\").css({\n\t\t\t\t\"-webkit-transform\": \"rotate(\" + orientation.gamma + \"deg)\"\n\t\t\t});\n\n\t\t\tcurRotation = orientation.gamma;\n\t\t};\n\n\t\tvar runFrame = function() {\n\t\t\tvar theta = 180 - (90 + Math.abs(curRotation));\n\n\t\t\tvar force = len * Math.cos(theta) * 9.8;\n\n\t\t\tvar accel = (force / ballMass) * accelModifier;\n\t\t\tconsole.log(theta, Math.cos(theta), len, force, accel);\n\n\t\t\t//Reapply the direction portion of the velocity, because we stripped it out with Math.abs\n\t\t\taccel = curRotation >= 0 ? accel : accel * -1;\n\n\t\t\tfor(var i=0,max=balls.length; i<max; i++) {\n\t\t\t\tballs[i].velocity += accel;\n\n\t\t\t\t$(balls[i].ele).css('left', '+='+balls[i].velocity);\n\t\t\t}\n\t\t}\n\n\t\t$(window).bind('content-ready', init);\n\n\t});\n})();"]],"start1":0,"start2":0,"length1":0,"length2":1162}]],"length":1162}
+{"contributors":[],"silentsave":true,"ts":1357768750235,"patch":[[{"diffs":[[0,"ntation."],[-1,"gamm"],[1,"bet"],[0,"a + \"deg"]],"start1":508,"start2":508,"length1":20,"length2":19},{"diffs":[[0,"ion."],[-1,"gamm"],[1,"bet"],[0,"a;\n\t"]],"start1":563,"start2":563,"length1":12,"length2":11}]],"length":1160,"saved":false}
+{"contributors":[],"silentsave":true,"ts":1357958403160,"patch":[[{"diffs":[[0,"ier;"],[-1,"\n\t\t\tconsole.log(theta, Math.cos(theta), len, force, accel);"],[0,"\n\n\t\t"]],"start1":752,"start2":752,"length1":67,"length2":8}]],"length":1101,"saved":false}
+{"ts":1357958406736,"patch":[[{"diffs":[[0,"max; i++) {\n"],[1,"                \n"],[0,"\t\t\t\tballs[i]"]],"start1":937,"start2":937,"length1":24,"length2":41}]],"length":1118,"saved":false}
+{"ts":1357958412557,"patch":[[{"diffs":[[0,"        "],[1,"console.log"],[0,"\n\t\t\t\tbal"]],"start1":957,"start2":957,"length1":16,"length2":27}]],"length":1129,"saved":false}
+{"ts":1357958413766,"patch":[[{"diffs":[[0,"sole.log"],[1,"(\"Acc\")"],[0,"\n\t\t\t\tbal"]],"start1":968,"start2":968,"length1":16,"length2":23}]],"length":1136,"saved":false}
+{"ts":1357958417130,"patch":[[{"diffs":[[0,"log(\"Acc"],[-1,"\""],[1,"eleration of \" +"],[0,")\n\t\t\t\tba"]],"start1":973,"start2":973,"length1":17,"length2":32}]],"length":1151,"saved":false}
+{"ts":1357958417869,"patch":[[{"diffs":[[0,"n of \" +"],[1," a"],[0,")\n\t\t\t\tba"]],"start1":989,"start2":989,"length1":16,"length2":18}]],"length":1153,"saved":false}
+{"ts":1357958419324,"patch":[[{"diffs":[[0,"of \" + a"],[1,"ccel + "],[0,")\n\t\t\t\tba"]],"start1":991,"start2":991,"length1":16,"length2":23}]],"length":1160,"saved":false}
+{"ts":1357958420681,"patch":[[{"diffs":[[0,"accel + "],[1,"\"wi\""],[0,")\n\t\t\t\tba"]],"start1":998,"start2":998,"length1":16,"length2":20}]],"length":1164,"saved":false}
+{"ts":1357958421457,"patch":[[{"diffs":[[0,"ccel + \""],[1," "],[0,"wi\")\n\t\t\t"]],"start1":999,"start2":999,"length1":16,"length2":17}]],"length":1165,"saved":false}
+{"ts":1357958424042,"patch":[[{"diffs":[[0,"l + \" wi"],[1,"ll change "],[0,"\")\n\t\t\t\tb"]],"start1":1002,"start2":1002,"length1":16,"length2":26}]],"length":1175,"saved":false}
+{"ts":1357958425629,"patch":[[{"diffs":[[0,"change \""],[1," + balls[]"],[0,")\n\t\t\t\tba"]],"start1":1013,"start2":1013,"length1":16,"length2":26}]],"length":1185,"saved":false}
+{"ts":1357958427369,"patch":[[{"diffs":[[0,"+ balls["],[1,"i"],[0,"])\n\t\t\t\tb"]],"start1":1022,"start2":1022,"length1":16,"length2":17}]],"length":1186,"saved":false}
+{"ts":1357958427911,"patch":[[{"diffs":[[0,"balls[i]"],[1,"."],[0,")\n\t\t\t\tba"]],"start1":1024,"start2":1024,"length1":16,"length2":17}]],"length":1187,"saved":false}
+{"ts":1357958432228,"patch":[[{"diffs":[[0,"alls[i]."],[1,"velocity + \" to \" +"],[0,")\n\t\t\t\tba"]],"start1":1025,"start2":1025,"length1":16,"length2":35}]],"length":1206,"saved":false}
+{"ts":1357958433179,"patch":[[{"diffs":[[0,"\" to \" +"],[1," "],[0,")\n\t\t\t\tba"]],"start1":1044,"start2":1044,"length1":16,"length2":17}]],"length":1207,"saved":false}
+{"ts":1357958434150,"patch":[[{"diffs":[[0," to \" + "],[1,"bal"],[0,")\n\t\t\t\tba"]],"start1":1045,"start2":1045,"length1":16,"length2":19}]],"length":1210,"saved":false}
+{"ts":1357958435540,"patch":[[{"diffs":[[0," \" + bal"],[1,"ls[i]"],[0,")\n\t\t\t\tba"]],"start1":1048,"start2":1048,"length1":16,"length2":21}]],"length":1215,"saved":false}
+{"ts":1357958438116,"patch":[[{"diffs":[[0,"balls[i]"],[1,".e"],[0,")\n\t\t\t\tba"]],"start1":1053,"start2":1053,"length1":16,"length2":18}]],"length":1217,"saved":false}
+{"ts":1357958440855,"patch":[[{"diffs":[[0,"alls[i]."],[-1,"e"],[1,"velocity"],[0,")\n\t\t\t\tba"]],"start1":1054,"start2":1054,"length1":17,"length2":24}]],"length":1224,"saved":false}
+{"ts":1357958445693,"patch":[[{"diffs":[[0," + \" to \" + "],[1,"("],[0,"balls[i].vel"]],"start1":1041,"start2":1041,"length1":24,"length2":25},{"diffs":[[0,"velocity"],[1," + "],[0,")\n\t\t\t\tba"]],"start1":1063,"start2":1063,"length1":16,"length2":19}]],"length":1228,"saved":false}
+{"ts":1357958446673,"patch":[[{"diffs":[[0,"ocity + "],[1,"acc"],[0,")\n\t\t\t\tba"]],"start1":1066,"start2":1066,"length1":16,"length2":19}]],"length":1231,"saved":false}
+{"ts":1357958448070,"patch":[[{"diffs":[[0,"ty + acc"],[1,"el)"],[0,")\n\t\t\t\tba"]],"start1":1069,"start2":1069,"length1":16,"length2":19}]],"length":1234,"saved":false}
+{"ts":1357958452001,"patch":[[{"diffs":[[0," accel))"],[1,";"],[0,"\n\t\t\t\tbal"]],"start1":1073,"start2":1073,"length1":16,"length2":17}]],"length":1235,"saved":false}
+{"ts":1357958549460,"patch":[[{"diffs":[[0,"er = .00"],[1,"0"],[0,"1;\n\n\t\tva"]],"start1":157,"start2":157,"length1":16,"length2":17}]],"length":1236,"saved":false}
+{"ts":1357958987155,"patch":[[{"diffs":[[0,"r = .000"],[-1,"1"],[1,"5"],[0,";\n\n\t\tvar"]],"start1":158,"start2":158,"length1":17,"length2":17}]],"length":1236,"saved":false}
+{"ts":1357959142590,"patch":[[{"diffs":[[0,"= .0005;"],[1,"\n        var friction = ."],[0,"\n\n\t\tvar "]],"start1":160,"start2":160,"length1":16,"length2":41}]],"length":1261,"saved":false}
+{"ts":1357959143811,"patch":[[{"diffs":[[0,"tion = ."],[1,"1;"],[0,"\n\n\t\tvar "]],"start1":185,"start2":185,"length1":16,"length2":18}]],"length":1263,"saved":false}
+{"ts":1357959157162,"patch":[[{"diffs":[[0,"= accel;"],[1,"\n                balls[]"],[0,"\n\n\t\t\t\t$("]],"start1":1134,"start2":1134,"length1":16,"length2":40}]],"length":1287,"saved":false}
+{"ts":1357959158652,"patch":[[{"diffs":[[0,"  balls["],[-1,"]"],[1,"i]."],[0,"\n\n\t\t\t\t$("]],"start1":1157,"start2":1157,"length1":17,"length2":19}]],"length":1289,"saved":false}
+{"ts":1357959160541,"patch":[[{"diffs":[[0,"alls[i]."],[1,"velocity -"],[0,"\n\n\t\t\t\t$("]],"start1":1160,"start2":1160,"length1":16,"length2":26}]],"length":1299,"saved":false}
+{"ts":1357959164186,"patch":[[{"diffs":[[0,"locity -"],[1,"= friction;sa"],[0,"\n\n\t\t\t\t$("]],"start1":1170,"start2":1170,"length1":16,"length2":29}]],"length":1312,"saved":false}
+{"ts":1357959165664,"patch":[[{"diffs":[[0,"ion;"],[-1,"sa"],[0,"\n\n\t\t"]],"start1":1185,"start2":1185,"length1":10,"length2":8}]],"length":1310,"saved":false}
+{"ts":1357959208159,"patch":[[{"diffs":[[0,"tion = ."],[1,"0"],[0,"1;\n\n\t\tva"]],"start1":185,"start2":185,"length1":16,"length2":17}]],"length":1311,"saved":false}
+{"ts":1357959502620,"patch":[[{"diffs":[[0,"l * -1;\n"],[1,"            "],[0,"\n\t\t\tfor("]],"start1":922,"start2":922,"length1":16,"length2":28},{"diffs":[[0,"        "],[1,"//"],[0,"console."]],"start1":998,"start2":998,"length1":16,"length2":18}]],"length":1325,"saved":false}
+{"ts":1357959503582,"patch":[[{"diffs":[[0,"        "],[1,"console"],[0,"\n\t\t\tfor("]],"start1":934,"start2":934,"length1":16,"length2":23}]],"length":1332,"saved":false}
+{"ts":1357959504864,"patch":[[{"diffs":[[0," console"],[1,".l"],[0,"\n\t\t\tfor("]],"start1":941,"start2":941,"length1":16,"length2":18}]],"length":1334,"saved":false}
+{"ts":1357959506407,"patch":[[{"diffs":[[0,"onsole.l"],[1,"og(\"rot\")"],[0,"\n\t\t\tfor("]],"start1":943,"start2":943,"length1":16,"length2":25}]],"length":1343,"saved":false}
+{"ts":1357959509731,"patch":[[{"diffs":[[0,"log(\"rot"],[-1,"\""],[1,"ation of \" + "],[0,")\n\t\t\tfor"]],"start1":950,"start2":950,"length1":17,"length2":29}]],"length":1355,"saved":false}
+{"ts":1357959511883,"patch":[[{"diffs":[[0," of \" + "],[1,"curRotation"],[0,")\n\t\t\tfor"]],"start1":963,"start2":963,"length1":16,"length2":27}]],"length":1366,"saved":false}
+{"ts":1357959516367,"patch":[[{"diffs":[[0,"Rotation"],[1," + \" resulted in acc\""],[0,")\n\t\t\tfor"]],"start1":974,"start2":974,"length1":16,"length2":37}]],"length":1387,"saved":false}
+{"ts":1357959519106,"patch":[[{"diffs":[[0,"d in acc"],[1,"eleration of "],[0,"\")\n\t\t\tfo"]],"start1":994,"start2":994,"length1":16,"length2":29}]],"length":1400,"saved":false}
+{"ts":1357959524288,"patch":[[{"diffs":[[0,"ion of \""],[-1,")"],[1," + accel);"],[0,"\n\t\t\tfor("]],"start1":1008,"start2":1008,"length1":17,"length2":26}]],"length":1409,"saved":false}
+{"ts":1357959604304,"patch":[[{"diffs":[[0,"rame, 10"],[1,"0"],[0,");\n\t\t};\n"]],"start1":404,"start2":404,"length1":16,"length2":17}]],"length":1410,"saved":false}
+{"ts":1357960097812,"patch":[[{"diffs":[[0,"theta = "],[1,"("],[0,"180 - (9"]],"start1":646,"start2":646,"length1":16,"length2":17},{"diffs":[[0,"tation))"],[1," * "],[0,";\n\n\t\t\tva"]],"start1":681,"start2":681,"length1":16,"length2":19}]],"length":1414,"saved":false}
+{"ts":1357960098695,"patch":[[{"diffs":[[0,"ion)) * "],[1,"Math"],[0,";\n\n\t\t\tva"]],"start1":684,"start2":684,"length1":16,"length2":20}]],"length":1418,"saved":false}
+{"ts":1357960100456,"patch":[[{"diffs":[[0,") * Math"],[1,".PI)"],[0,";\n\n\t\t\tva"]],"start1":688,"start2":688,"length1":16,"length2":20}]],"length":1422,"saved":false}
+{"ts":1357960104334,"patch":[[{"diffs":[[0,"Math.PI)"],[1," / 180"],[0,";\n\n\t\t\tva"]],"start1":692,"start2":692,"length1":16,"length2":22}]],"length":1428,"saved":false}
+{"ts":1357960105205,"patch":[[{"diffs":[[0,"ion() {\n"],[1,"            \n"],[0,"\t\t\tvar t"]],"start1":631,"start2":631,"length1":16,"length2":29}]],"length":1441,"saved":false}
+{"ts":1357960106170,"patch":[[{"diffs":[[0,"        "],[1,"/"],[0,"\n\t\t\tvar "]],"start1":643,"start2":643,"length1":16,"length2":17}]],"length":1442,"saved":false}
+{"ts":1357960107143,"patch":[[{"diffs":[[0,"       /"],[1,"/"],[0,"\n\t\t\tvar "]],"start1":644,"start2":644,"length1":16,"length2":17}]],"length":1443,"saved":false}
+{"ts":1357960108711,"patch":[[{"diffs":[[0,"      //"],[1,"Conver to r"],[0,"\n\t\t\tvar "]],"start1":645,"start2":645,"length1":16,"length2":27}]],"length":1454,"saved":false}
+{"ts":1357960113885,"patch":[[{"diffs":[[0,"nver"],[1,"t"],[0," to r"],[1,"adians, by the way"],[0,"\n\t\t\t"]],"start1":655,"start2":655,"length1":13,"length2":32}]],"length":1473,"saved":false}
+{"ts":1357960197844,"patch":[[{"diffs":[[0,".000"],[-1,"5"],[1,"1"],[0,";\n  "]],"start1":162,"start2":162,"length1":9,"length2":9}]],"length":1473,"saved":false}
+{"ts":1357960205160,"patch":[[{"diffs":[[0,"er = .00"],[-1,"0"],[0,"1;\n     "]],"start1":157,"start2":157,"length1":17,"length2":16}]],"length":1472,"saved":false}
+{"ts":1357960235953,"patch":[[{"diffs":[[0,"elocity "],[-1,"-"],[0,"= fricti"]],"start1":1331,"start2":1331,"length1":17,"length2":16}]],"length":1471,"saved":false}
+{"ts":1357960241303,"patch":[[{"diffs":[[0,"ocity = "],[1,"balls[i].v"],[0,"friction"]],"start1":1333,"start2":1333,"length1":16,"length2":26}]],"length":1481,"saved":false}
+{"ts":1357960241775,"patch":[[{"diffs":[[0,"lls[i].v"],[1,"eloc"],[0,"friction"]],"start1":1343,"start2":1343,"length1":16,"length2":20}]],"length":1485,"saved":false}
+{"ts":1357960243968,"patch":[[{"diffs":[[0,"i].veloc"],[1,"ity "],[0,"friction"]],"start1":1347,"start2":1347,"length1":16,"length2":20}]],"length":1489,"saved":false}
+{"ts":1357960245155,"patch":[[{"diffs":[[0,"elocity "],[1,">"],[0,"friction"]],"start1":1351,"start2":1351,"length1":16,"length2":17}]],"length":1490,"saved":false}
+{"ts":1357960248454,"patch":[[{"diffs":[[0,"locity >"],[1,"= 0 ? "],[0,"friction"]],"start1":1352,"start2":1352,"length1":16,"length2":22}]],"length":1496,"saved":false}
+{"ts":1357960248894,"patch":[[{"diffs":[[0," >= 0 ? "],[1,"b"],[0,"friction"]],"start1":1358,"start2":1358,"length1":16,"length2":17}]],"length":1497,"saved":false}
+{"ts":1357960249298,"patch":[[{"diffs":[[0,">= 0 ? b"],[1,"al"],[0,"friction"]],"start1":1359,"start2":1359,"length1":16,"length2":18}]],"length":1499,"saved":false}
+{"ts":1357960250410,"patch":[[{"diffs":[[0," 0 ? bal"],[1,"ls[i"],[0,"friction"]],"start1":1361,"start2":1361,"length1":16,"length2":20}]],"length":1503,"saved":false}
+{"ts":1357960252974,"patch":[[{"diffs":[[0," balls[i"],[1,"].velocity "],[0,"friction"]],"start1":1365,"start2":1365,"length1":16,"length2":27}]],"length":1514,"saved":false}
+{"ts":1357960255628,"patch":[[{"diffs":[[0,"velocity"],[1," -"],[0," frictio"]],"start1":1375,"start2":1375,"length1":16,"length2":18}]],"length":1516,"saved":false}
+{"ts":1357960292709,"patch":[[{"diffs":[[0,"friction"],[1," : balls[i]"],[0,";\n\n\t\t\t\t$"]],"start1":1386,"start2":1386,"length1":16,"length2":27}]],"length":1527,"saved":false}
+{"ts":1357960293255,"patch":[[{"diffs":[[0,"balls[i]"],[1,".v"],[0,";\n\n\t\t\t\t$"]],"start1":1397,"start2":1397,"length1":16,"length2":18}]],"length":1529,"saved":false}
+{"ts":1357960296078,"patch":[[{"diffs":[[0,"lls[i].v"],[1,"elocity "],[0,";\n\n\t\t\t\t$"]],"start1":1399,"start2":1399,"length1":16,"length2":24}]],"length":1537,"saved":false}
+{"ts":1357960299239,"patch":[[{"diffs":[[0,"elocity "],[1,"+ friction"],[0,";\n\n\t\t\t\t$"]],"start1":1407,"start2":1407,"length1":16,"length2":26}]],"length":1547,"saved":false}
+{"ts":1357960310192,"patch":[[{"diffs":[[0," accel;\n"],[1,"                \n                if\n"],[0,"        "]],"start1":1297,"start2":1297,"length1":16,"length2":52}]],"length":1583,"saved":false}
+{"ts":1357960313825,"patch":[[{"diffs":[[0,"      if"],[1,"()"],[0,"\n       "]],"start1":1332,"start2":1332,"length1":16,"length2":18}]],"length":1585,"saved":false}
+{"ts":1357960315946,"patch":[[{"diffs":[[0,"     if("],[1,"Math.abs"],[0,")\n      "]],"start1":1333,"start2":1333,"length1":16,"length2":24}]],"length":1593,"saved":false}
+{"ts":1357960321216,"patch":[[{"diffs":[[0,"Math.abs"],[1,"(balls[i].vel)"],[0,")\n      "]],"start1":1341,"start2":1341,"length1":16,"length2":30}]],"length":1607,"saved":false}
+{"ts":1357960321742,"patch":[[{"diffs":[[0,"s[i].vel"],[1,"ocity"],[0,"))\n     "]],"start1":1354,"start2":1354,"length1":16,"length2":21}]],"length":1612,"saved":false}
+{"ts":1357960325149,"patch":[[{"diffs":[[0,"locity))"],[1,")"],[0,"\n       "]],"start1":1361,"start2":1361,"length1":16,"length2":17}]],"length":1613,"saved":false}
+{"ts":1357960328490,"patch":[[{"diffs":[[0,"elocity)"],[-1,")"],[1," <= "],[0,")\n      "]],"start1":1360,"start2":1360,"length1":17,"length2":20}]],"length":1616,"saved":false}
+{"ts":1357960329050,"patch":[[{"diffs":[[0,"ity) <= "],[1,"fric"],[0,")\n      "]],"start1":1364,"start2":1364,"length1":16,"length2":20}]],"length":1620,"saved":false}
+{"ts":1357960330899,"patch":[[{"diffs":[[0," <= fric"],[1,"tion) {}"],[0,")\n      "]],"start1":1368,"start2":1368,"length1":16,"length2":24}]],"length":1628,"saved":false}
+{"ts":1357960332205,"patch":[[{"diffs":[[0,"ction) {"],[1,"\n                    \n                "],[0,"})\n     "]],"start1":1375,"start2":1375,"length1":16,"length2":54}]],"length":1666,"saved":false}
+{"ts":1357960336408,"patch":[[{"diffs":[[0,"                "],[1,"balls[i]"],[0,"\n               "]],"start1":1388,"start2":1388,"length1":32,"length2":40}]],"length":1674,"saved":false}
+{"ts":1357960339169,"patch":[[{"diffs":[[0,"balls[i]"],[1,".velocity = 0;"],[0,"\n       "]],"start1":1404,"start2":1404,"length1":16,"length2":30}]],"length":1688,"saved":false}
+{"ts":1357960343461,"patch":[[{"diffs":[[0,"       }"],[-1,")"],[1," else {"],[0,"\n       "]],"start1":1436,"start2":1436,"length1":17,"length2":23},{"diffs":[[0,"iction;\n"],[1,"    "],[0,"\n\t\t\t\t$(b"]],"start1":1566,"start2":1566,"length1":16,"length2":20}]],"length":1698,"saved":false}
+{"ts":1357960343891,"patch":[[{"diffs":[[0,"on;\n    "],[1,"        "],[0,"\n\t\t\t\t$(b"]],"start1":1570,"start2":1570,"length1":16,"length2":24}]],"length":1706,"saved":false}
+{"ts":1357960344839,"patch":[[{"diffs":[[0,"        "],[1,"    }"],[0,"\n\t\t\t\t$(b"]],"start1":1578,"start2":1578,"length1":16,"length2":21}]],"length":1711,"saved":false}
+{"ts":1357960345565,"patch":[[{"diffs":[[0,"      }\n"],[1,"                \n"],[0,"\t\t\t\t$(ba"]],"start1":1584,"start2":1584,"length1":16,"length2":33}]],"length":1728,"saved":false}
+{"ts":1357960352426,"patch":[[{"diffs":[[0,"                "],[1,"    "],[0,"balls[i].velocit"]],"start1":1452,"start2":1452,"length1":32,"length2":36}]],"length":1732,"saved":false}
+{"ts":1357960416703,"patch":[[{"diffs":[[0,"fier = ."],[-1,"0"],[0,"01;\n    "]],"start1":155,"start2":155,"length1":17,"length2":16},{"diffs":[[0,"friction = ."],[1,"0"],[0,"01;\n\n\t\tvar i"]],"start1":179,"start2":179,"length1":24,"length2":25}]],"length":1732,"saved":false}
+{"ts":1357960469845,"patch":[[{"diffs":[[0,"nFrame, "],[-1,"10"],[1,"5"],[0,"0);\n\t\t};"]],"start1":401,"start2":401,"length1":18,"length2":17}]],"length":1731,"saved":false}
+{"ts":1357960515808,"patch":[[{"diffs":[[0,"tion = ."],[-1,"0"],[0,"01;\n\n\t\tv"]],"start1":183,"start2":183,"length1":17,"length2":16}]],"length":1730,"saved":false}
+{"ts":1357960520206,"patch":[[{"diffs":[[0,"Modifier = ."],[1,"0"],[0,"01;\n        "]],"start1":151,"start2":151,"length1":24,"length2":25}]],"length":1731,"saved":false}
+{"ts":1357960565031,"patch":[[{"diffs":[[0,"er = .00"],[-1,"1"],[1,"5"],[0,";\n      "]],"start1":157,"start2":157,"length1":17,"length2":17},{"diffs":[[0,"ion = .0"],[-1,"1"],[1,"05"],[0,";\n\n\t\tvar"]],"start1":185,"start2":185,"length1":17,"length2":18}]],"length":1732,"saved":false}
+{"ts":1357960692003,"patch":[[{"diffs":[[0,"n = .005"],[1,"\\\n        "],[0,";\n\n\t\tvar"]],"start1":187,"start2":187,"length1":16,"length2":26}]],"length":1742,"saved":false}
+{"ts":1357960744372,"patch":[[{"diffs":[[0,".005"],[-1,"\\\n        "],[0,";\n\n\t"]],"start1":191,"start2":191,"length1":18,"length2":8}]],"length":1732,"saved":false}
+{"ts":1357960760334,"patch":[[{"diffs":[[0,");\n\n"],[-1,"\t\t\tsetInterval(runFrame, 50);\n"],[0,"\t\t};"]],"start1":381,"start2":381,"length1":38,"length2":8}]],"length":1702,"saved":false}
+{"ts":1357960761995,"patch":[[{"diffs":[[0," = .005;"],[1,"\n    v"],[0,"\n\n\t\tvar "]],"start1":188,"start2":188,"length1":16,"length2":22}]],"length":1708,"saved":false}
+{"ts":1357960767097,"patch":[[{"diffs":[[0,"05;\n    "],[-1,"v"],[1,"    var run = false"],[0,"\n\n\t\tvar "]],"start1":193,"start2":193,"length1":17,"length2":35}]],"length":1726,"saved":false}
+{"ts":1357960775291,"patch":[[{"diffs":[[0,"n.beta;\n"],[1,"            \n            if(!)\n"],[0,"\t\t};\n\n\t\t"]],"start1":588,"start2":588,"length1":16,"length2":47}]],"length":1757,"saved":false}
+{"ts":1357960779222,"patch":[[{"diffs":[[0,"    if(!"],[1,"run"],[0,")\n\t\t};\n\n"]],"start1":617,"start2":617,"length1":16,"length2":19}]],"length":1760,"saved":false}
+{"ts":1357960781305,"patch":[[{"diffs":[[0,"if(!run)"],[1," {\n                run\n            }"],[0,"\n\t\t};\n\n\t"]],"start1":621,"start2":621,"length1":16,"length2":52}]],"length":1796,"saved":false}
+{"ts":1357960781815,"patch":[[{"diffs":[[0,"     run"],[1," ="],[0,"\n       "]],"start1":643,"start2":643,"length1":16,"length2":18}]],"length":1798,"saved":false}
+{"ts":1357960783446,"patch":[[{"diffs":[[0,"   run ="],[1," \n    \t\tsetInterval(runFrame, 50);"],[0,"\n       "]],"start1":645,"start2":645,"length1":16,"length2":50}]],"length":1832,"saved":false}
+{"ts":1357960785556,"patch":[[{"diffs":[[0,"n = "],[-1,"\n    \t\t"],[0,"setI"]],"start1":650,"start2":650,"length1":15,"length2":8}]],"length":1825,"saved":false}

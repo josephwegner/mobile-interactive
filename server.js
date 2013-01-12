@@ -4,6 +4,10 @@ var express = require('express')
   , io = require('socket.io').listen(server);
 
 io.set('log level', 0);
+io.configure(function () { 
+  io.set("transports", ["xhr-polling"]); 
+  io.set("polling duration", 10); 
+});
 
 app.set('views', __dirname + '/views');
 app.use(express.static(__dirname + '/static'));
@@ -26,6 +30,7 @@ io.sockets.on('connection', function(socket) {
     socket.on('desktop-register', function(data) {
         regUsers[data.id] = deskSocket = socket;
     });
+
     
     socket.on('mobile-register', function(data) {
         mobileSocket = socket;
@@ -34,6 +39,7 @@ io.sockets.on('connection', function(socket) {
             deskSocket = regUsers[data.id];
             
             deskSocket.emit('mobile-on');
+            mobileSocket.emit('start');
         }
     });
 

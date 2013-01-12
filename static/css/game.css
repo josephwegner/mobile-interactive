@@ -14,7 +14,7 @@
 	margin: auto;
 	margin-top: 100px;
 	position: relative;
-	-webkit-transition: -webkit-transform: .3s;
+	-webkit-transition: -webkit-transform .3s;
 }
 
 #game #field .ball {
@@ -24,7 +24,7 @@
 	background-color: #916F9E;
 	position: absolute;
 	bottom: 15px;
-	left: 75%;
+	left: 50%;
 }
 
 #game #field #bar {

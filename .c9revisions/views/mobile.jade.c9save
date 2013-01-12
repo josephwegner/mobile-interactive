@@ -3,3 +3,12 @@
 {"ts":1357751682832,"patch":[[{"diffs":[[0,"c=\"/js/m"],[-1,"ain"],[1,"obile"],[0,".js\")\n  "]],"start1":346,"start2":346,"length1":19,"length2":21}]],"length":483,"saved":false}
 {"ts":1357751686796,"patch":[[{"diffs":[[0,"s\")\nbody"],[-1," "],[1,"(data-id=\""],[0,"\n    div"]],"start1":431,"start2":431,"length1":17,"length2":26}]],"length":492,"saved":false}
 {"ts":1357751714531,"patch":[[{"diffs":[[0,"data-id="],[-1,"\""],[1,"id)"],[0,"\n    div"]],"start1":440,"start2":440,"length1":17,"length2":19}]],"length":494,"saved":false}
+{"contributors":[],"silentsave":true,"ts":1357958820478,"patch":[[{"diffs":[[0,"mobile.js\")\n"],[1,"        script(type=\"text/javascript\", src=\"/js/mobile-data.js\")\n"],[0,"        scri"]],"start1":353,"start2":353,"length1":24,"length2":89},{"diffs":[[0,"    "],[-1,"div(id=\"show-qr\")\n        div(id=\"qr\")"],[1,"<span c"]],"start1":517,"start2":517,"length1":42,"length2":11}]],"length":528,"saved":false}
+{"ts":1357958823242,"patch":[[{"diffs":[[0," <span c"],[1,"lass=\"count\">"]],"start1":520,"start2":520,"length1":8,"length2":21}]],"length":541,"saved":false}
+{"ts":1357958823690,"patch":[[{"diffs":[[0,"\"count\">"],[1,"0"]],"start1":533,"start2":533,"length1":8,"length2":9}]],"length":542,"saved":false}
+{"ts":1357958825207,"patch":[[{"diffs":[[0,"count\">0"],[1," me"]],"start1":534,"start2":534,"length1":8,"length2":11}]],"length":545,"saved":false}
+{"ts":1357958830359,"patch":[[{"diffs":[[0,"t\">0"],[-1," me"],[1,"</span><"]],"start1":538,"start2":538,"length1":7,"length2":12}]],"length":550,"saved":false}
+{"ts":1357958833166,"patch":[[{"diffs":[[0,"0</span>"],[-1,"<"],[1," <span clas"]],"start1":541,"start2":541,"length1":9,"length2":19}]],"length":560,"saved":false}
+{"ts":1357958834582,"patch":[[{"diffs":[[0,"span> <span clas"],[1,"s=\""]],"start1":544,"start2":544,"length1":16,"length2":19}]],"length":563,"saved":false}
+{"ts":1357958837454,"patch":[[{"diffs":[[0,"/span> <span class=\""],[1,"sent\">mess"]],"start1":543,"start2":543,"length1":20,"length2":30}]],"length":573,"saved":false}
+{"ts":1357958841372,"patch":[[{"diffs":[[0,"nt\">mess"],[1,"ages sent.</span>"]],"start1":565,"start2":565,"length1":8,"length2":25}]],"length":590,"saved":false}
